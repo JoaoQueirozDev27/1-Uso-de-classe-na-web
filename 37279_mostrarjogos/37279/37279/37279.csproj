@@ -124,7 +124,9 @@
   <ItemGroup>
     <Compile Include="Classes\Banco.cs" />
     <Compile Include="Classes\Desenvolvedor.cs" />
+    <Compile Include="Classes\Genero.cs" />
     <Compile Include="Classes\GerenciaDesenvolvedores.cs" />
+    <Compile Include="Classes\GerenciadorGeneros.cs" />
     <Compile Include="Classes\GerenciadorJogos.cs" />
     <Compile Include="Classes\Jogo.cs" />
     <Compile Include="index.aspx.cs">

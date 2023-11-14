@@ -26,7 +26,13 @@ namespace _37279
             List<Jogo> lista_jogos = jogos.Listar();
             for (int i = 0; i < lista_jogos.Count; i++)
             {
-                litTeste.Text += lista_jogos[i].Nome + $"-{lista_jogos[i].desenvolvedor.Nome}" + "<br>";
+                jogo.CarregarGeneros(lista_jogos[i].Codigo);
+                string generos =null;
+                for(int j = 0;j < jogo.generos.Count; j++)
+                {
+                   generos += "-" + jogo.generos[j].Nome;
+                }
+                litTeste.Text += lista_jogos[i].Nome + $"-{lista_jogos[i].desenvolvedor.Nome}" + generos +"<br>";
             }
 
             /*Busca um desenvolvedor

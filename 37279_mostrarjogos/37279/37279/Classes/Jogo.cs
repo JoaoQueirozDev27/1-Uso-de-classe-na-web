@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using _37279.Classes;
 using MySql.Data.MySqlClient;
 
 public class Jogo
@@ -11,7 +12,9 @@ public class Jogo
     public string Sinopse { get; set; }
     public DateTime DataLancamento { get; set; }
     public Desenvolvedor desenvolvedor { get; set; }
+    public List<Genero> generos { get; set; }
 
+    GerenciadorGeneros GerenciadorGeneros = new GerenciadorGeneros();
     public void BuscarDados(int codigo)
     {
         Banco banco = new Banco();
@@ -27,5 +30,10 @@ public class Jogo
             if (dados.IsClosed) 
                 dados.Close();
         banco.Desconectar();                
+    }
+
+    public void CarregarGeneros(int codigo)
+    {
+        generos = GerenciadorGeneros.BuscarGeneros(codigo);
     }
 }
