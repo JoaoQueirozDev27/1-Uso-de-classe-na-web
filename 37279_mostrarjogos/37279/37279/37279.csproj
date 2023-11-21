@@ -121,13 +121,26 @@
     <Content Include="css\estilo.css" />
     <Content Include="css\jogo_escolhido.css" />
     <Content Include="images\3pontos.png" />
+    <Content Include="images\call of duty mobile.jpg" />
+    <Content Include="images\call of duty warzone mobile.jpg" />
+    <Content Include="images\call of duty warzone.jpg" />
     <Content Include="images\codMW2.jpg" />
+    <Content Include="images\controle.png" />
     <Content Include="images\download.png" />
+    <Content Include="images\estrelas.png" />
     <Content Include="images\estrela_cheia.png" />
     <Content Include="images\estrela_vazia.png" />
+    <Content Include="images\fundo.png" />
+    <Content Include="images\GabiChata%40hotmail.com.jpg" />
+    <Content Include="images\JoaoBelson%40hotmail.com.jpg" />
+    <Content Include="images\JoaoSilva%40gmail.com.jpg.jpg" />
+    <Content Include="images\logo.ico" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_sem_fundo.png" />
+    <Content Include="images\MariaHelena%40gmail.jpg" />
+    <Content Include="images\mariasilva%40hotmail.com.jpg" />
     <Content Include="images\Plano de Fundo.png" />
+    <Content Include="images\resident evil.jpg" />
     <Content Include="images\usuario.png" />
     <Content Include="images\usuario_branco.png" />
     <Content Include="index.aspx" />
@@ -139,9 +152,11 @@
     <Compile Include="Classes\Genero.cs" />
     <Compile Include="Classes\GerenciaDesenvolvedores.cs" />
     <Compile Include="Classes\GerenciadorGeneros.cs" />
+    <Compile Include="Classes\GerenciadorUsuarios.cs" />
     <Compile Include="Classes\GerenciadorJogos.cs" />
     <Compile Include="Classes\Jogo.cs" />
     <Compile Include="Classes\TipoJogo.cs" />
+    <Compile Include="Classes\Usuario.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -152,6 +167,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\resident evil" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -12,10 +12,14 @@ namespace _37279
         protected void Page_Load(object sender, EventArgs e)
         {
             Jogo jogo = new Jogo();
-
+            GerenciadorUsuarios GerenciadorUsuarios = new GerenciadorUsuarios();
             try
             {
-                int codigo = int.Parse(Request["c"]);
+                int codigo = 0;
+                if (Request["c"] == null)
+                    codigo = 1;
+                else
+                    codigo = int.Parse(Request["c"]);
 
                 jogo.BuscarDados(codigo);
                 jogo.CarregarGeneros(codigo);
@@ -26,18 +30,30 @@ namespace _37279
                 litGenero.Text = jogo.ListToString();
                 litDesenvolvedor.Text = jogo.Desenvolvedor.Nome;
                 litDataLancamento.Text = jogo.DataLancamento.ToShortDateString();
+                List<Usuario> usuarios = new List<Usuario>();
+                usuarios = GerenciadorUsuarios.ListaUsuariosJogo(codigo);
 
-                litJogadores.Text += @" <div class='perfil'>
-                                            <div class='imagem_perfil' style=""background-image:url('images/{email}.jpg'); background-size:cover;""></div>
-                                            <h2>{nome_usuario}</h2>
+                for(int i = 0; i < usuarios.Count; i++)
+                {
+                    string Email = usuarios[i].Email;
+                    string Apelido = usuarios[i].Apelido;
+                    string Descricao = usuarios[i].Descricao;
+                    int Avaliacao = usuarios[i].Avaliacao;
+
+
+                    litJogadores.Text += $@" <div class='perfil'>
+                                            <div class='imagem_perfil' style=""background-image:url('images/{Email}.jpg'); background-size:cover;""></div>
+                                            <h2>{Apelido}</h2>
                                             <div class='progress-container'>
                                                 <div class='progress-bar'>
-                                                     <div class='progress' id='progress' style='width:0'></div>
+                                                     <div class='progress' id='progress' style='width:{Avaliacao}0%'></div>
                                                 </div>
                                                 <img class='estrelas' src='images/estrelas.png'>
                                             </div>
-                                            <p>{descricao_usuario}</p>
+                                            <p class='descricao'>{Descricao}</p>
                                         </div>";
+                }
+                
             }
             catch
             {               

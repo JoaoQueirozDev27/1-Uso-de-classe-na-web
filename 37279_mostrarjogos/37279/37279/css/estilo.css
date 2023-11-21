@@ -21,14 +21,37 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(#3b524d, #00d4ca);
   }
 
-body{
-    background-color: rgb(14, 16, 16);
-}
-
 a{
     text-transform: none;
     text-decoration: none;
-    color: white;
+    color: black;
+}
+
+
+.progress-container {
+    width: 75%;
+    height: 30px;
+    background-color: #6c968d;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+}
+
+.progress {
+    height: 100%;
+    background-color: #58eece;
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.estrelas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height:100%;
 }
 
 header{
@@ -41,7 +64,7 @@ header{
 
 main{
     height: 87vh;
-    color: white;
+    color: black;
 }
 
 .logo{
@@ -54,11 +77,11 @@ main{
     padding: 5px;
     border-radius: 20px;
     font-size: 15px;
-    border:2px white solid;
+    border:2px black solid;
 }
 
 button{
-    color: white;
+    color: black;
     background-color: rgb(32, 42, 39);
     width: fit-content;
     font-size: 15px;
@@ -69,7 +92,7 @@ button{
     align-items: center;
     padding: 3px;
     border-radius: 20px;
-    border:2px white solid;
+    border:2px black solid;
 }
 
 .entrar img{
@@ -81,11 +104,10 @@ button{
 }
 
 #perfis_destacados,#jogos_destacados,#comentarios{
-    color: white;
+    color: black;
     margin: auto;
     width: 75%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1%;
     margin-bottom: 10px;
@@ -112,7 +134,7 @@ hr{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border:2px white solid;
+    border:2px black solid;
     border-radius: 40px;
 }
 
@@ -120,20 +142,9 @@ hr{
     width: 60%;
 }
 
-.perfil p,.perfil h2{
+.perfil h2{
     width: 100%;
     text-align: center;
-}
-
-.estrelas{
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    gap: 1%;
-}
-
-.estrelas img{
-    width: 15%;
 }
 
 .jogo{
