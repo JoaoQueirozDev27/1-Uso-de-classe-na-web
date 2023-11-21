@@ -85,7 +85,7 @@ Create Table jogo
 	cd_jogo int,
 	nm_jogo varchar(200),
 	ds_sinopse_jogo TEXT,
-	aa_lancamento_jogo int,
+	dt_lancamento_jogo DATE,
 	cd_desenvolvedor int,
 	cd_tipo_jogo int,
 	constraint pk_jogo primary key (cd_jogo),
@@ -173,10 +173,10 @@ Insert into genero values(3,'Sobrevivência');
 Insert into genero values(4,'Terror');
 Insert into genero values(5,'Suspense');
 
-Insert into jogo values(1,'Call of Duty Warzone','Mais um jogo da franquia',2014,2,1);
-Insert into jogo values(2,'Call of Duty Mobile','Mais um jogo da franquia,mas pra mobile',2019,2,1);
-Insert into jogo values(3,'Call of Duty Warzone Mobile','Versão do Warzone para dispositivos mobiles',2022,2,1);
-Insert into jogo values(4,'Resident Evil','Sobreviva aos zumbis',2020,3,2);
+Insert into jogo values(1,'Call of Duty Warzone','Mais um jogo da franquia','2014-2-1',2,1);
+Insert into jogo values(2,'Call of Duty Mobile','Mais um jogo da franquia,mas pra mobile','2019-3-2',2,1);
+Insert into jogo values(3,'Call of Duty Warzone Mobile','Versão do Warzone para dispositivos mobiles','2022-9-8',2,1);
+Insert into jogo values(4,'Resident Evil','Sobreviva aos zumbis','2020-7-9',3,2);
 
 Insert into jogo_genero values(1,1);
 Insert into jogo_genero values(1,2);

@@ -118,6 +118,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\estilo.css" />
+    <Content Include="css\jogo_escolhido.css" />
+    <Content Include="images\3pontos.png" />
+    <Content Include="images\codMW2.jpg" />
+    <Content Include="images\download.png" />
+    <Content Include="images\estrela_cheia.png" />
+    <Content Include="images\estrela_vazia.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo_sem_fundo.png" />
+    <Content Include="images\Plano de Fundo.png" />
+    <Content Include="images\usuario.png" />
+    <Content Include="images\usuario_branco.png" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -129,6 +141,7 @@
     <Compile Include="Classes\GerenciadorGeneros.cs" />
     <Compile Include="Classes\GerenciadorJogos.cs" />
     <Compile Include="Classes\Jogo.cs" />
+    <Compile Include="Classes\TipoJogo.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

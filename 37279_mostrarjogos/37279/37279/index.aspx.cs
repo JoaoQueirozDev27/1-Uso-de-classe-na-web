@@ -12,37 +12,38 @@ namespace _37279
         protected void Page_Load(object sender, EventArgs e)
         {
             Jogo jogo = new Jogo();
-            GerenciadorJogos jogos = new GerenciadorJogos();
 
-            /*Buscar um jogo
-            jogo.BuscarDados(2);
-            if (jogo.Nome != null)
-                litTeste.Text = jogo.Nome;
-            else
-                litTeste.Text = "Não encontrado";
-            */
-
-            /*Lista todos os jogos*/
-            List<Jogo> lista_jogos = jogos.Listar();
-            for (int i = 0; i < lista_jogos.Count; i++)
+            try
             {
-                jogo.CarregarGeneros(lista_jogos[i].Codigo);
-                string generos =null;
-                for(int j = 0;j < jogo.generos.Count; j++)
-                {
-                   generos += "-" + jogo.generos[j].Nome;
-                }
-                litTeste.Text += lista_jogos[i].Nome + $"-{lista_jogos[i].desenvolvedor.Nome}" + generos +"<br>";
-            }
+                int codigo = int.Parse(Request["c"]);
 
-            /*Busca um desenvolvedor
-            GerenciaDesenvolvedores gerenciaDesenvolvedores = new GerenciaDesenvolvedores();
-            List<Desenvolvedor> listinha = gerenciaDesenvolvedores.Listar();
-            for (int i = 0; i < listinha.Count; i++)
-            {
-                litTeste.Text += listinha[i].Nome + "<br>";
+                jogo.BuscarDados(codigo);
+                jogo.CarregarGeneros(codigo);
+
+                litNomeJogo.Text = jogo.Nome;
+                litSinopse.Text = jogo.Sinopse;
+                litTipoJogo.Text = jogo.TipoJogo.Nome;
+                litGenero.Text = jogo.ListToString();
+                litDesenvolvedor.Text = jogo.Desenvolvedor.Nome;
+                litDataLancamento.Text = jogo.DataLancamento.ToShortDateString();
+
+                litJogadores.Text += @" <div class='perfil'>
+                                            <div class='imagem_perfil' style=""background-image:url('images/{email}.jpg'); background-size:cover;""></div>
+                                            <h2>{nome_usuario}</h2>
+                                            <div class='progress-container'>
+                                                <div class='progress-bar'>
+                                                     <div class='progress' id='progress' style='width:0'></div>
+                                                </div>
+                                                <img class='estrelas' src='images/estrelas.png'>
+                                            </div>
+                                            <p>{descricao_usuario}</p>
+                                        </div>";
             }
-            */
+            catch
+            {               
+            }
+            
+          
         }
     }
 }

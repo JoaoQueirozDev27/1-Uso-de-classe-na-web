@@ -22,7 +22,7 @@ public class GerenciadorJogos
             jogo.Sinopse = dados.GetString("ds_sinopse_jogo");
             int codigo_desenvolvedor = dados.GetInt32("cd_desenvolvedor");
             desenvolvedor.BuscarDados(codigo_desenvolvedor);
-            jogo.desenvolvedor = desenvolvedor;
+            jogo.Desenvolvedor = desenvolvedor;
             Jogos.Add(jogo);
         }
 
