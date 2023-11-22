@@ -12,7 +12,7 @@ public class Usuario
     public string Apelido { get; set; }
     public string Descricao { get; set; }
     public string Senha { get; set; }
-    public int Avaliacao { get; set; }
+    public double Avaliacao { get; set; }
 
 
     public void BuscarDados(string email)

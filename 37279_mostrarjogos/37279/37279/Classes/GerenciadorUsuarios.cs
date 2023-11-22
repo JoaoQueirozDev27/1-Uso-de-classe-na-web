@@ -22,7 +22,7 @@ public class GerenciadorUsuarios
         {
             Usuario usuario = new Usuario();
             usuario.Apelido = dados.GetString("nm_apelido");
-            usuario.Avaliacao = dados.GetInt16("avg(a.qt_avaliacao)");
+            usuario.Avaliacao = dados.GetDouble("avg(a.qt_avaliacao)");
             usuario.Descricao = dados.GetString("ds_usuario");
             usuario.Email= dados.GetString("nm_email");
             usuarios.Add(usuario);

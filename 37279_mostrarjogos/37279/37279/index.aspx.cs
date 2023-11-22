@@ -38,15 +38,16 @@ namespace _37279
                     string Email = usuarios[i].Email;
                     string Apelido = usuarios[i].Apelido;
                     string Descricao = usuarios[i].Descricao;
-                    int Avaliacao = usuarios[i].Avaliacao;
+                    double Avaliacao = usuarios[i].Avaliacao;
+                    Avaliacao = (Avaliacao / 5) * 100;
 
 
                     litJogadores.Text += $@" <div class='perfil'>
-                                            <div class='imagem_perfil' style=""background-image:url('images/{Email}.jpg'); background-size:cover;""></div>
+                                            <div class='imagem_perfil' style=""background-image:url('images/usuario.png'); background-size:cover;""></div>
                                             <h2>{Apelido}</h2>
                                             <div class='progress-container'>
                                                 <div class='progress-bar'>
-                                                     <div class='progress' id='progress' style='width:{Avaliacao}0%'></div>
+                                                     <div class='progress' id='progress' style='width:{Avaliacao.ToString("#,##")}%'></div>
                                                 </div>
                                                 <img class='estrelas' src='images/estrelas.png'>
                                             </div>

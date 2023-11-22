@@ -140,9 +140,13 @@ Create Table avaliacao
 );
 
 #Massa de testes
-Insert into usuario	values('JoaoSilva@gmail.com','João Silva Costa','Vunahai','jhshjasdjfdsakfkjlsdfkjads','Senha789');
-Insert into usuario	values('JoaoBelson@hotmail.com','João Belson Costa','Xiasco','blalalladalsad','Senha8189');
-Insert into usuario	values('MariaSilva@hotmail.com','Maria Silva Costa','Moidu','jkfsdjkdslad','nSenha579');
+Insert into usuario	values('JoaoSilva@gmail.com','João Silva Costa','Vunahai','jhshj asd jfdsakf k  j lsdfkjads','Senha789');
+Insert into usuario	values('JoaoBelson@hotmail.com','João Belson Costa','Xiasco','bla lallada lsad','Senha8189');
+Insert into usuario	values('MariaSilva@hotmail.com','Maria Silva Costa','Moidu','jkfsdjkds lad','nSenha579');
+Insert into usuario values('CarlosMelo@gmail.com', 'Carlos Melo', 'Carlinhos', 'Gamer desde criança', 'Senha123');
+Insert into usuario values('AnaSantos@hotmail.com', 'Ana Santos', 'Aninha', 'Amo jogos de estratégia', 'Senha456');
+Insert into usuario values('PedroFerreira@gmail.com', 'Pedro Ferreira', 'Pepezinho', 'Explorador de mundos virtuais', 'Senha789');
+Insert into usuario values('JuliaCosta@hotmail.com', 'Julia Costa', 'Julinha', 'Viciada em jogos de terror', 'Senha567');
 
 Insert into tipo_avaliacao values(1,'Amigavel');
 Insert into tipo_avaliacao values(2,'Habilidade');
@@ -193,14 +197,24 @@ Insert into jogo_genero values(3,3);
 Insert into jogo_genero values(4,4);
 Insert into jogo_genero values(4,5);
 
+#jogo 1
 Insert into biblioteca values(1,1,'JoaoSilva@gmail.com',15,'Gosto de jogar de sniper',3,'Joao_silva');
-Insert into biblioteca values(1,2,'JoaoSilva@gmail.com',35,'Gosto de jogar de sniper',3,'Joao_silva');
-Insert into biblioteca values(2,4,'JoaoSilva@gmail.com',23,'Prefiro jogar agressivo pelo mobile',4,'Joao-Silva');
-Insert into biblioteca values(3,4,'JoaoSilva@gmail.com',13,'Prefiro jogar agressivo pelo mobile',4,'Joao_silva_20');
+Insert into biblioteca values(1,2,'JoaoSilva@gmail.com',35,'Gosto de jogar de sniper',3,'Joao_silva2');
+Insert into biblioteca values(1,1,'JoaoBelson@hotmail.com',0,'fdsdf sdd dsdsf',0,'Joao_Belson');
+Insert into biblioteca values(1,1,'CarlosMelo@gmail.com',0,'fdsdfsddsdsf',0,'Carlao2');
 Insert into biblioteca values(1,1,'MariaSilva@hotmail.com',15,'Gosto de jogar de sniper',3,'Mariah');
+
+#jogo 2
+Insert into biblioteca values(2,4,'JoaoSilva@gmail.com',23,'Prefiro jogar agressivo pelo mobile',4,'Joao-Silva');
 Insert into biblioteca values(2,2,'MariaSilva@hotmail.com',19,'Gosto de jogar de sniper',3,'Mariah');
+
+#jogo 3 
+Insert into biblioteca values(3,4,'JoaoSilva@gmail.com',13,'Prefiro jogar agressivo pelo mobile',4,'Joao_silva_20');
+
+#jogo 4
 Insert into biblioteca values(4,3,'MariaSilva@hotmail.com',0,'fdsdfsddsdsf',0,'Mariah_novo');
 Insert into biblioteca values(4,1,'JoaoBelson@hotmail.com',0,'fdsdfsddsdsf',0,'Joao_silva');
+
 
 Insert into preferencia_genero values('JoaoSilva@gmail.com',1);
 Insert into preferencia_genero values('JoaoSilva@gmail.com',2);

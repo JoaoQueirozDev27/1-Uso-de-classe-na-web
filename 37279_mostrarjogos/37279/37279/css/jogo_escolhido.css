@@ -18,6 +18,7 @@ main {
     display: flex;
     flex-wrap:wrap;
 }
+
 .jogo_escolhido{
     display: flex;
     flex-wrap: wrap;
@@ -64,6 +65,7 @@ main {
 
 .descricao {
     width: 75%!important;
+    height:47px;
     text-align: center;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -71,3 +73,5 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+

@@ -129,7 +129,7 @@ hr{
 }
 
 .perfil,.jogo{
-    padding: 10px;
+    padding: 10px 0;
     width: 15%;
     display: flex;
     justify-content: center;
@@ -156,13 +156,6 @@ hr{
     padding: 0;
 }
 
-.jogo p{
-    width: 100%;
-    text-align: center;
-    background-color:  rgb(28 37 35);
-    padding:25px;
-    margin-bottom:-10px;
-}
 footer{
     height:3vh;
     background-color: rgb(28 37 35);
@@ -185,6 +178,11 @@ footer{
 .botao_mostrar_mais p{
     font-size: 26px;
     margin-top: -13px;
+}
+
+.imagem_perfil {
+    width: 81px;
+    height: 93px;
 }
 
 /*----------------------------------------------------------------Media Queries----------------------------------------------------------------*/
